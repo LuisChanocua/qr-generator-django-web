@@ -1,0 +1,9 @@
+services:
+  web:
+    user: "${UID}:${GID}"  
+    volumes:
+      - ./app:/app
+    environment:
+      DEBUG: "true"
+      DJANGO_COLLECTSTATIC: "0"
+      CSRF_TRUSTED_ORIGINS: "http://localhost:8000"
